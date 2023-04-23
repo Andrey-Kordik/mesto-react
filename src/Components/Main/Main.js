@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { api } from '../../utils/Api.js'
 import { useEffect } from 'react'
-import Card from '../Card/index.js'
+import Card from '../Card/Card'
 
 function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick}) {
     const [userName, setUsername] = useState("")
