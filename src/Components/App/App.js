@@ -1,7 +1,7 @@
 import Header from '../Header';
 import Footer from '../Footer';
 import Main from '../Main';
-import ImagePopup from '../ImagePopup';
+import ImagePopup from '../ImagePopup/ImagePopup.js';
 import PopupWithForm from '../PopupWithForm';
 import { useState } from 'react';
 
