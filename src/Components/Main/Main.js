@@ -15,7 +15,10 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick}) {
                 setUserDescription(data.about)
                 setUserAvatar(data.avatar)
             })
-    })
+            .catch(err => {
+                console.log(err.message)
+              })
+    }, [])
 
     const [cards, setCards] = useState([])
 
@@ -23,9 +26,11 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick}) {
         api.getCards(cards)
             .then((data) => {
                setCards (data)
-
-            })      
-    }, [cards])
+            })
+            .catch(err => {
+                console.log(err.message)
+              })      
+    }, [])
 
     return (
         <main>

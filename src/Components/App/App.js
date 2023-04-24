@@ -19,7 +19,6 @@ function App() {
     setImagePopupOpen(true)
   }
 
-
   function handleEditAvatarClick() {
     setEditAvatarOpen(true)
   }
@@ -32,7 +31,6 @@ function App() {
     setAddPlaceOpen(true)
   }
 
-
   function closeAllPopups() {
     setEditAvatarOpen(false)
     setEditProfileOpen(false)
@@ -40,7 +38,6 @@ function App() {
     setSelectedCard({})
     setImagePopupOpen(false)
   }
-
 
   return (
     <div className="project">
@@ -55,7 +52,7 @@ function App() {
         <Footer />
       </div>
       <ImagePopup
-       isOpen={isImagePopupOpen}
+        isOpen={isImagePopupOpen}
         card={selectedCard}
         onClose={closeAllPopups}
       />
@@ -64,33 +61,32 @@ function App() {
         name="edit-profile"
         title='Редактировать профиль'
         isOpen={isEditProfilePopupOpen}
-        onClose={closeAllPopups}>
-
-        <fieldset className="popup__set">
+        onClose={closeAllPopups}
+        buttonText="Сохранить">
+        <>
           <input type="text" name="name" id="Name" className="popup__info" placeholder="Ваше имя" minLength="2"
             maxLength="40" required></input>
           <span className="popup__info-error Name-error"></span>
           <input type="text" name="job" id="Job" className="popup__info" placeholder="О себе" minLength="2"
             maxLength="200" required></input>
           <span className="popup__info-error Job-error"></span>
-          <button className="popup__savebutton" id="editform" type="submit">Сохранить</button>
-        </fieldset>
+        </>
       </PopupWithForm>
 
       <PopupWithForm
         name="add-card"
         title="Новое место"
         isOpen={isAddPlacePopupOpen}
-        onClose={closeAllPopups}>
-        <fieldset className="popup__set">
+        onClose={closeAllPopups}
+        buttonText="Создать">
+        <>
           <input type="text" name="placename" id="placename" className="popup__info" placeholder="Название"
             minLength="2" maxLength="30" required></input>
           <span className="popup__info-error placename-error"></span>
           <input type="url" name="link" id="link" className="popup__info" placeholder="Ссылка на картинку"
             required></input>
           <span className="popup__info-error link-error"></span>
-          <button className="popup__savebutton" id="addcard" type="submit">Создать</button>
-        </fieldset>
+        </>
       </PopupWithForm>
 
       <PopupWithForm
@@ -102,10 +98,10 @@ function App() {
         name="avatar"
         title="Обновить аватар"
         isOpen={isEditAvatarPopupOpen}
-        onClose={closeAllPopups}>
+        onClose={closeAllPopups}
+        buttonText="Сохранить">
         <input type="url" name="avatar" id="avatar" className="popup__info" placeholder="Ссылка на картинку" required></input>
         <span className="popup__info-error avatar-error"></span>
-        <button className="popup__savebutton" id="avatarbut" type="submit">Сохранить</button>
       </PopupWithForm>
 
     </div>
