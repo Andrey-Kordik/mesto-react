@@ -57,6 +57,9 @@ function App() {
       .then((newCard) => {
         setCurrentCards((state) => state.map((c) => c._id === card._id ? newCard : c));
       })
+      .catch(err => {
+        console.log(err.message)
+      })
   }
 
   function handleCardDelete(evt, card) {

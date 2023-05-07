@@ -4,10 +4,9 @@ function PopupWithForm({ name, title, children, isOpen, onClose, buttonText, onS
 
   return (
     <div className={`popup popup_${name} ${isOpen ? "popup_opened" : ""} `}>
-      console.log(isOpen)
       <div className="popup__content popup__commonclass">
         <h3 className='popup__heading'>{`${title}`}</h3>
-        <form className="popup__container" name={`${name}`} noValidate>
+        <form className="popup__container" name={`${name}`}>
           <fieldset className="popup__set">
             {children}
             <button className="popup__savebutton" id="addcard" type="submit" onClick={onSubmit}>{renderLoading ?

@@ -21,8 +21,6 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, renderLoading }) {
         addPlaceLink.current.value = '';
     }, [isOpen]);
 
-
-
     return (
         <PopupWithForm
             name="add-card"
