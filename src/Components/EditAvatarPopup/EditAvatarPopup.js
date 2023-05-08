@@ -25,7 +25,7 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar, renderLoading }) {
             isOpen={isOpen}
             onClose={onClose}
             onSubmit={handleSubmit}
-            renderLoading = {renderLoading}
+            renderLoading={renderLoading}
             loadingButtonText="Сохранение..."
             buttonText="Сохранить">
             <input type="url" ref={avatarInput} name="avatar" id="avatar" className="popup__info" placeholder="Ссылка на картинку" required></input>
