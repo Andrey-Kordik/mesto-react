@@ -23,7 +23,6 @@ function App() {
   const [isPopupWithConfirmOpen, setPopupWithConfirmOpen] = useState(false);
   const [cardForDelete, setCardForDelete] = useState({})
 
-
   const [isLoadingAvatar, setIsLoadingAvatar] = useState(false);
   const [isLoadingAddPlace, setIsLoadingAddPlace] = useState(false);
   const [isLoadingSetUserInfo, setIsLoadingSetUserInfo] = useState(false);

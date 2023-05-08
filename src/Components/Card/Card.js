@@ -1,7 +1,6 @@
 
 function Card(props) {
 
-
     function handleCardClick() {
         props.onCardClick(props.card);
     }
@@ -30,7 +29,6 @@ function Card(props) {
             <p className="element__likecounter">{[props.card.likes.length]}</p>
             {isOwn && <button className="element__delete-button" onClick={handleCardDelete} />}
         </article>
-
     )
 }
 

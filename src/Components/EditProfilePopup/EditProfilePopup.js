@@ -22,7 +22,6 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, renderLoading }) {
         setDescription(currentUser.about);
     }, [currentUser, isOpen]);
 
-
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -42,7 +41,6 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, renderLoading }) {
             onSubmit={handleSubmit}
             loadingButtonText="Сохранение..."
             renderLoading={renderLoading}
-
         >
             <input type="text" name="name" id="Name" className="popup__info" placeholder="Ваше имя" minLength="2"
                 maxLength="40" required onChange={handleChangeName} value={name || ""}></input>
@@ -50,7 +48,6 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, renderLoading }) {
             <input type="text" name="job" id="Job" className="popup__info" placeholder="О себе" minLength="2"
                 maxLength="200" required onChange={handleChangeDescription} value={description || ""}></input>
             <span className="popup__info-error Job-error"></span>
-
         </PopupWithForm>
     )
 }
